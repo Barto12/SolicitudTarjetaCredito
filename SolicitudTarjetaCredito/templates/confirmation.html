@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco - Solicitud de Tarjeta de Crédito</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .card .fas {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-body">
+                <i class="fas fa-check-circle text-success"></i>
+                <h3 class="card-title">Felicidades, haz solicitado tu tarjeta</h3>
+                <p>Pronto te llegará a tu domicilio.</p>
+                <p><strong>Nombre:</strong> {{ tarjeta.nombre }}</p>
+                <p><strong>Dirección:</strong> {{ tarjeta.direccion }}</p>
+                <p><strong>Teléfono:</strong> {{ tarjeta.telefono }}</p>
+                <p><strong>Ingresos Mensuales:</strong> {{ tarjeta.ingresos }} MXN</p>
+                <p><strong>Límite de Crédito:</strong> {{ tarjeta.limite }} MXN</p>
+                <a href="/reset" class="btn btn-danger">Resetear Solicitud</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
